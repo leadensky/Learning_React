@@ -1,13 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {createContext} from 'react';
+import { ColorProvider } from "./hooks/colorHooks.js";
+import {render} from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
+render(
+  <ColorProvider>
     <App />
-  </React.StrictMode>,
+  </ColorProvider>,
   document.getElementById('root')
 );
 
